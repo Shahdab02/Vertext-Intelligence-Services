@@ -44,7 +44,7 @@ const Layout = ({ theme, onToggleTheme }) => {
         <Outlet />
       </main>
       <Footer />
-      <div className="pointer-events-none fixed bottom-[max(1rem,env(safe-area-inset-bottom))] left-3 z-50 sm:bottom-8 sm:left-8">
+      <div className="pointer-events-none fixed bottom-[max(1rem,env(safe-area-inset-bottom))] left-3 z-50 hidden sm:block sm:bottom-8 sm:left-8">
         <a
           href="https://wa.me/919891915550"
           target="_blank"
@@ -55,7 +55,7 @@ const Layout = ({ theme, onToggleTheme }) => {
           <MessageCircleMore className="size-5 sm:size-7" />
         </a>
       </div>
-      <div className="pointer-events-none fixed bottom-[max(1rem,env(safe-area-inset-bottom))] right-3 z-50 sm:bottom-8 sm:right-8">
+      <div className="pointer-events-none fixed bottom-[max(1rem,env(safe-area-inset-bottom))] right-3 z-50 hidden sm:block sm:bottom-8 sm:right-8">
         <a
           href="tel:+919891915550"
           className="pointer-events-auto flex size-11 items-center justify-center rounded-full bg-red-500 text-white shadow-[0_18px_35px_rgba(239,68,68,0.45)] transition-transform hover:scale-105 sm:size-14"

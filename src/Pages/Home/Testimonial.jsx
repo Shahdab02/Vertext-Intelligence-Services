@@ -53,10 +53,10 @@ const Testimonial = () => {
           >
             What our clients say
           </h2>
-          <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-300">
+          {/* <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-300">
             These illustrative sample testimonials are placeholders. Replace
             them with approved client feedback before publishing.
-          </p>
+          </p> */}
         </div>
         <button
           type="button"

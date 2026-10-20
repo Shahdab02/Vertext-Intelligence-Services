@@ -19,7 +19,7 @@ const WhyChoise = () => {
             About Us
           </p>
 
-          <h2 className="mt-4 text-center font-serif text-4xl font-semibold leading-[1.08] tracking-tight text-slate-900 sm:text-5xl lg:text-left lg:text-[3.2rem]">
+          <h2 className="mt-4 text-center font-serif text-3xl font-semibold leading-[1.08] tracking-tight text-slate-900 sm:text-5xl lg:text-left lg:text-[3.2rem]">
             ABOUT VERTEX INTELLIGENCE
             <span className="mt-2 block text-slate-900">SERVICES</span>
           </h2>

@@ -1,5 +1,30 @@
 @import "tailwindcss";
 
+@keyframes contact-bar-scroll {
+  from {
+    transform: translateX(100vw);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.contact-bar {
+  overflow: hidden;
+}
+
+.contact-bar__track {
+  display: flex;
+  width: max-content;
+  animation: contact-bar-scroll 24s linear infinite;
+}
+
+.contact-bar:hover .contact-bar__track,
+.contact-bar:focus-within .contact-bar__track {
+  animation-play-state: paused;
+}
+
 @keyframes testimonial-scroll {
   to {
     transform: translateX(-50%);
@@ -45,6 +70,15 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .contact-bar__track {
+    animation: none;
+  }
+
+  .contact-bar__track {
+    width: 100%;
+    justify-content: center;
+  }
+
   .testimonial-marquee {
     overflow-x: auto;
   }
@@ -142,8 +176,143 @@ html[data-theme='dark'] .border-blue-200 {
 }
 
 html[data-theme='dark'] section[class*="bg-[#f5f8fc]"],
-html[data-theme='dark'] section[class*="bg-[#f5f7fb]"] {
+html[data-theme='dark'] section[class*="bg-[#f5f7fb]"],
+html[data-theme='dark'] .loyalty-focus-section,
+html[data-theme='dark'] .missing-person-focus-section,
+html[data-theme='dark'] .pre-marriage-focus-section {
   background-color: #0f1a2b !important;
+}
+
+html[data-theme='dark'] .pre-marriage-privacy-card {
+  background-color: #1e293b;
+}
+
+html[data-theme='dark'] .pre-marriage-privacy-card > div:first-child {
+  background-color: rgb(244 63 94 / 0.12);
+}
+
+html[data-theme='dark'] .pre-marriage-help-card {
+  border-color: #334155;
+  background-color: #1e293b;
+}
+
+html[data-theme='dark'] .pre-marriage-help-card__icon {
+  background-color: #111c2e;
+}
+
+html[data-theme='dark'] .pre-marriage-help-card__title {
+  color: #f1f5f9;
+}
+
+html[data-theme='dark'] .pre-marriage-help-card__description {
+  color: #cbd5e1;
+}
+
+html[data-theme='dark'] .surveillance-focus-section {
+  background-color: #0f1a2b !important;
+}
+
+html[data-theme='dark'] .surveillance-focus-section > div:first-child {
+  background-color: rgb(59 130 246 / 0.08);
+}
+
+html[data-theme='dark'] .surveillance-focus-card {
+  border-color: #334155;
+  background-color: #111c2e !important;
+}
+
+html[data-theme='dark'] .surveillance-focus-card__number {
+  color: #94a3b8;
+}
+
+html[data-theme='dark'] .surveillance-focus-card:hover .surveillance-focus-card__number {
+  color: #bfdbfe;
+}
+
+html[data-theme='dark'] .surveillance-help-card {
+  border-color: #334155;
+  background-color: #1e293b;
+}
+
+html[data-theme='dark'] .surveillance-help-card__icon {
+  background-color: #111c2e;
+}
+
+html[data-theme='dark'] .surveillance-help-card__title {
+  color: #f1f5f9;
+}
+
+html[data-theme='dark'] .surveillance-help-card__description {
+  color: #cbd5e1;
+}
+
+html[data-theme='dark'] .surveillance-standards-card {
+  background-color: #1e293b !important;
+}
+
+html[data-theme='dark'] .surveillance-standards-card__icon {
+  background-color: #111c2e !important;
+}
+
+html[data-theme='dark'] .post-marriage-page .bg-rose-50 {
+  background-color: #2b2334 !important;
+}
+
+html[data-theme='dark'] .post-marriage-page .bg-rose-100 {
+  background-color: #382536 !important;
+}
+
+html[data-theme='dark'] .post-marriage-focus-section {
+  background-color: #0f1a2b !important;
+}
+
+html[data-theme='dark'] .post-marriage-focus-section > div:first-child {
+  background-color: rgb(244 63 94 / 0.08);
+}
+
+html[data-theme='dark'] .post-marriage-focus-card {
+  border-color: #334155;
+  background-color: #111c2e !important;
+}
+
+html[data-theme='dark'] .post-marriage-focus-card__icon {
+  background-color: #2b2334;
+}
+
+html[data-theme='dark'] .post-marriage-help-card,
+html[data-theme='dark'] .post-marriage-privacy-card {
+  border-color: #334155;
+  background-color: #1e293b !important;
+}
+
+html[data-theme='dark'] .post-marriage-help-card__icon,
+html[data-theme='dark'] .post-marriage-privacy-card__icon {
+  background-color: #111c2e !important;
+}
+
+html[data-theme='dark'] .post-marriage-help-card__title {
+  color: #f1f5f9;
+}
+
+html[data-theme='dark'] .post-marriage-help-card__description {
+  color: #cbd5e1;
+}
+
+html[data-theme='dark'] .loyalty-help-card {
+  border-color: #334155;
+  background-color: #1e293b;
+}
+
+html[data-theme='dark'] .loyalty-help-card__icon {
+  background-color: #111c2e;
+}
+
+html[data-theme='dark'] .loyalty-help-card__title {
+  color: #f1f5f9;
+}
+
+html[data-theme='dark'] .loyalty-help-card__description {
+  color: #cbd5e1;
 }
 
 html[data-theme='dark'] section[class*="from-[#eef5ff]"] {
