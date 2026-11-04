@@ -84,6 +84,8 @@ import {
 } from "lucide-react";
 import recognitionImage from "../../assets/recogntion.webp";
 import trophyImage from "../../assets/trophy.jpeg";
+import ceremonyImage from "../../assets/awards_image/vertexaward1.jpeg";
+import doctorateImage from "../../assets/awards_image/vertexaward2.jpeg";
 
 const standards = [
   {
@@ -134,23 +136,16 @@ const Awards = () => {
     <main className="overflow-hidden bg-white text-slate-900">
       {/* HERO SECTION */}
       <section className="relative isolate flex min-h-[470px] items-center overflow-hidden bg-slate-950 px-5 py-24 text-white sm:px-8 lg:min-h-[530px]">
-        <div className="absolute inset-0 -z-20 bg-[radial-gradient(ellipse_at_80%_20%,rgba(37,99,235,0.28),transparent_45%),radial-gradient(ellipse_at_10%_90%,rgba(30,64,175,0.2),transparent_40%)]" />
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1.1 }}
-          className="absolute -right-24 top-10 -z-10 size-80 rounded-full border border-blue-400/20 sm:size-[440px]"
+        <img
+          src={ceremonyImage}
+          alt="Vertex Intelligence Services award ceremony"
+          fetchPriority="high"
+          className="absolute inset-0 z-0 h-full w-full scale-[1.12] object-cover object-[center_38%]"
         />
+        <div className="absolute inset-0 z-[1] bg-gradient-to-r from-slate-950/90 via-slate-950/65 to-slate-950/20" />
+        <div className="absolute inset-0 z-[1] bg-[linear-gradient(0deg,rgba(2,6,23,0.24),transparent_65%)]" />
 
-        <motion.div
-          initial={{ opacity: 0, scale: 0.7 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.2, ease: "easeOut" }}
-          className="absolute -right-12 top-24 -z-10 size-64 rounded-full border border-blue-300/10 sm:right-16 sm:size-80"
-        />
-
-        <div className="mx-auto w-full max-w-7xl">
+        <div className="relative z-10 mx-auto w-full max-w-7xl">
           <motion.div
             initial="hidden"
             animate="visible"
@@ -217,7 +212,7 @@ const Awards = () => {
           </motion.div>
         </div>
 
-        <div className="pointer-events-none absolute bottom-0 left-0 h-px w-full bg-gradient-to-r from-transparent via-blue-400/60 to-transparent" />
+        <div className="pointer-events-none absolute bottom-0 left-0 z-10 h-px w-full bg-gradient-to-r from-transparent via-blue-400/60 to-transparent" />
       </section>
 
       {/* FEATURED RECOGNITION */}
@@ -282,6 +277,90 @@ const Awards = () => {
               </figcaption>
             </div>
           </motion.figure>
+        </div>
+      </section>
+
+      {/* AWARD GALLERY */}
+      <section className="bg-white px-5 py-16 sm:px-8 sm:py-24">
+        <div className="mx-auto max-w-7xl">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={fadeUp}
+            transition={{ duration: 0.65 }}
+            className="mx-auto mb-12 max-w-2xl text-center"
+          >
+            <p className="text-sm font-bold uppercase tracking-[0.2em] text-blue-700">
+              Milestones worth celebrating
+            </p>
+            <h2 className="mt-4 font-serif text-3xl font-bold text-slate-900 sm:text-4xl md:text-5xl">
+              Recognition in pictures
+            </h2>
+            <p className="mt-5 leading-7 text-slate-600">
+              A look back at meaningful moments in the Vertex Intelligence
+              Services journey.
+            </p>
+          </motion.div>
+
+          <div className="grid gap-7 md:grid-cols-2">
+            {[
+              {
+                image: ceremonyImage,
+                alt: "Vertex Intelligence Services award ceremony",
+                title: "An award ceremony",
+                description:
+                  "A proud moment celebrating achievement and professional dedication.",
+              },
+              {
+                image: doctorateImage,
+                alt: "Honorary doctorate presented to Dr. Sumit Aggrawal of Vertex Intelligence Services",
+                title: "Honorary Doctorate",
+                description:
+                  "Recognition presented to Dr. Sumit Aggrawal of Vertex Intelligence Services.",
+              },
+            ].map((award, index) => (
+              <motion.figure
+                key={award.title}
+                initial={{ opacity: 0, y: 28 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.6, delay: index * 0.12 }}
+                className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-lg shadow-slate-900/5 transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-slate-900/10"
+              >
+                <div className="relative isolate flex h-[360px] items-center justify-center overflow-hidden bg-slate-900 p-3 sm:h-[420px] sm:p-5">
+                  <img
+                    src={award.image}
+                    alt=""
+                    aria-hidden="true"
+                    className="absolute inset-0 h-full w-full scale-110 object-cover opacity-40 blur-2xl lg:hidden"
+                  />
+                  <div className="absolute inset-0 bg-slate-950/20 lg:hidden" />
+                  <img
+                    src={award.image}
+                    alt={award.alt}
+                    loading="lazy"
+                    className="relative z-10 h-full w-full object-contain transition duration-500 group-hover:scale-[1.02] lg:object-cover"
+                  />
+                </div>
+                <figcaption className="p-6 sm:p-7">
+                  <div className="flex items-start gap-4">
+                    <span className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-amber-50 text-amber-700">
+                      <Award size={22} />
+                    </span>
+                    <div>
+                      <h3 className="font-serif text-xl font-bold text-slate-900 sm:text-2xl">
+                        {award.title}
+                      </h3>
+                      <p className="mt-2 text-sm leading-6 text-slate-600">
+                        {award.description}
+                      </p>
+                    </div>
+                  </div>
+                </figcaption>
+              </motion.figure>
+            ))}
+          </div>
         </div>
       </section>
 
