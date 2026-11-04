@@ -309,6 +309,7 @@ const Awards = () => {
                 image: ceremonyImage,
                 alt: "Vertex Intelligence Services award ceremony",
                 title: "An award ceremony",
+                mobileAspect: "aspect-[4/3]",
                 description:
                   "A proud moment celebrating achievement and professional dedication.",
               },
@@ -316,6 +317,7 @@ const Awards = () => {
                 image: doctorateImage,
                 alt: "Honorary doctorate presented to Dr. Sumit Aggrawal of Vertex Intelligence Services",
                 title: "Honorary Doctorate",
+                mobileAspect: "aspect-[2/3]",
                 description:
                   "Recognition presented to Dr. Sumit Aggrawal of Vertex Intelligence Services.",
               },
@@ -328,19 +330,14 @@ const Awards = () => {
                 transition={{ duration: 0.6, delay: index * 0.12 }}
                 className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-lg shadow-slate-900/5 transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-slate-900/10"
               >
-                <div className="relative isolate flex h-[360px] items-center justify-center overflow-hidden bg-slate-900 p-3 sm:h-[420px] sm:p-5">
-                  <img
-                    src={award.image}
-                    alt=""
-                    aria-hidden="true"
-                    className="absolute inset-0 h-full w-full scale-110 object-cover opacity-40 blur-2xl lg:hidden"
-                  />
-                  <div className="absolute inset-0 bg-slate-950/20 lg:hidden" />
+                <div
+                  className={`relative flex w-full items-center justify-center overflow-hidden bg-slate-100 lg:h-[420px] lg:aspect-auto ${award.mobileAspect}`}
+                >
                   <img
                     src={award.image}
                     alt={award.alt}
                     loading="lazy"
-                    className="relative z-10 h-full w-full object-contain transition duration-500 group-hover:scale-[1.02] lg:object-cover"
+                    className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.02]"
                   />
                 </div>
                 <figcaption className="p-6 sm:p-7">
