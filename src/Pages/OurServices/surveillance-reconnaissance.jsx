@@ -219,29 +219,24 @@ const SurveillanceReconnaissance = () => {
             <div className="relative mx-auto w-full max-w-xl lg:mx-0">
               <div className="absolute -left-4 -top-4 h-28 w-28 rounded-tl-[2rem] border-l-2 border-t-2 border-blue-300 sm:-left-6 sm:-top-6" />
 
-              <div className="relative overflow-hidden rounded-[2rem] bg-slate-100 shadow-2xl shadow-slate-900/10">
+              <div className="relative overflow-hidden rounded-t-[2rem] bg-slate-100 shadow-2xl shadow-slate-900/10">
                 <img
                   src={service.image}
                   alt="Investigation team reviewing information"
                   className="h-[340px] w-full object-cover transition duration-700 hover:scale-[1.04] sm:h-[470px]"
                 />
-
-                <div className="absolute inset-0 bg-gradient-to-t from-[#071426]/85 via-transparent to-transparent" />
-
-                <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
-                  <div className="flex items-center gap-4 rounded-2xl border border-white/20 bg-white/10 p-4 backdrop-blur-xl">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-cyan-400/20 text-cyan-200">
-                      <Eye size={25} />
-                    </div>
-                    <div>
-                      <p className="font-semibold text-white">
-                        Focused on relevant observations
-                      </p>
-                      <p className="mt-1 text-sm text-slate-200">
-                        Defined scope. Clear reporting.
-                      </p>
-                    </div>
-                  </div>
+              </div>
+              <div className="flex items-center gap-4 rounded-b-[2rem] bg-slate-900 p-5 text-white sm:p-6">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-cyan-400/20 text-cyan-200">
+                  <Eye size={25} />
+                </div>
+                <div>
+                  <p className="font-semibold text-white">
+                    Focused on relevant observations
+                  </p>
+                  <p className="mt-1 text-sm text-slate-200">
+                    Defined scope. Clear reporting.
+                  </p>
                 </div>
               </div>
 

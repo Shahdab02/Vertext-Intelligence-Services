@@ -3,7 +3,6 @@ import { motion } from 'framer-motion'
 import {
   ArrowRight,
   ArrowUpRight,
-  BadgeCheck,
   CheckCircle2,
   ClipboardCheck,
   FileSearch,
@@ -192,55 +191,24 @@ const CorporateVerification = () => {
                 alt="Corporate verification and business documentation"
                 className="h-[300px] w-full object-cover sm:h-[390px] lg:h-[440px]"
               />
-
-              <div className="absolute inset-0 bg-gradient-to-t from-[#071426] via-transparent to-transparent" />
-
-              <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-7">
-                <div className="flex items-center gap-4 rounded-2xl border border-white/15 bg-[#071426]/80 p-4 shadow-xl backdrop-blur-md sm:p-5">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-blue-600/20 text-blue-300">
-                    <Building2 size={26} />
-                  </div>
-
-                  <div>
-                    <h2 className="font-semibold text-white">
-                      Informed Business Decisions
-                    </h2>
-
-                    <p className="mt-1 text-sm leading-5 text-slate-300">
-                      Verification shaped around your enquiry.
-                    </p>
-                  </div>
-
-                  <ShieldCheck
-                    size={25}
-                    className="ml-auto hidden shrink-0 text-blue-400 sm:block"
-                  />
-                </div>
-              </div>
             </div>
 
             <motion.div
-              animate={{ y: [0, -7, 0] }}
-              transition={{
-                duration: 4,
-                repeat: Infinity,
-                ease: 'easeInOut',
-              }}
-              className="absolute -left-3 top-8 hidden items-center gap-3 rounded-xl border border-white/10 bg-slate-900/95 p-4 shadow-xl sm:flex md:-left-7"
+              className="relative mt-3 flex items-center gap-4 rounded-2xl border border-white/15 bg-slate-900 p-5 shadow-xl"
             >
-              <div className="rounded-lg bg-blue-500/15 p-2 text-blue-300">
-                <BadgeCheck size={23} />
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-blue-600/20 text-blue-300">
+                <Building2 size={26} />
               </div>
 
               <div>
-                <p className="text-sm font-semibold text-white">
-                  Structured Review
-                </p>
-
-                <p className="mt-1 text-xs text-slate-400">
-                  Clear scope, clear findings
+                <h2 className="font-semibold text-white">
+                  Informed Business Decisions
+                </h2>
+                <p className="mt-1 text-sm leading-5 text-slate-300">
+                  Verification shaped around your enquiry.
                 </p>
               </div>
+              <ShieldCheck size={25} className="ml-auto hidden shrink-0 text-blue-400 sm:block" />
             </motion.div>
           </motion.div>
         </div>
@@ -296,21 +264,20 @@ const CorporateVerification = () => {
           >
             <div className="absolute -inset-3 rounded-[2rem] bg-blue-100/70 transition duration-500 group-hover:bg-blue-200/70" />
 
-            <div className="relative overflow-hidden rounded-[1.5rem]">
-              <img
-                src={service.image}
-                alt="Documents for corporate verification"
-                className="h-[320px] w-full object-cover transition duration-700 group-hover:scale-105 sm:h-[440px]"
-              />
-
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent" />
-
-              <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
-                <p className="text-sm font-semibold uppercase tracking-[0.16em] text-blue-300">
+            <div className="overflow-hidden rounded-[1.5rem] border border-slate-200 bg-white shadow-xl">
+              <div className="overflow-hidden bg-slate-100">
+                <img
+                  src={service.image}
+                  alt="Documents for corporate verification"
+                  className="h-[320px] w-full object-cover transition duration-700 group-hover:scale-105 sm:h-[440px]"
+                />
+              </div>
+              <div className="p-6 sm:p-8">
+                <p className="text-sm font-semibold uppercase tracking-[0.16em] text-blue-700">
                   A focused approach
                 </p>
 
-                <h3 className="mt-2 max-w-sm text-2xl font-bold text-white sm:text-3xl">
+                <h3 className="mt-2 max-w-sm text-2xl font-bold text-slate-900 sm:text-3xl">
                   The details matter in every business relationship.
                 </h3>
               </div>

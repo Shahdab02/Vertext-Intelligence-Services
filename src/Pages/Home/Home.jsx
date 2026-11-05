@@ -150,8 +150,9 @@ const Home = () => {
             </p>
             <div className="mt-6 flex items-center justify-center gap-3 rounded-xl border border-blue-100 bg-blue-50 px-3 py-3 font-bold text-blue-700 shadow-inner shadow-blue-100 sm:px-4">
               <PhoneCall className="size-5 shrink-0" />
-              <span className="text-xl tracking-tight sm:text-2xl">
-                +91-9891915550
+              <span className="flex flex-col text-left text-base tracking-tight sm:text-lg">
+                <span>+91-9891915550</span>
+                <span>01141882075</span>
               </span>
             </div>
             <a
@@ -160,6 +161,13 @@ const Home = () => {
             >
               <PhoneCall className="size-4" />
               CALL NOW
+            </a>
+            <a
+              href="tel:+911141882075"
+              className="mt-3 inline-flex w-full items-center justify-center gap-2 rounded-full border border-blue-600 px-5 py-3.5 text-base font-semibold text-blue-700 transition-all hover:bg-blue-50"
+            >
+              <PhoneCall className="size-4" />
+              CALL 01141882075
             </a>
             <div className="mt-5 flex items-center justify-center gap-2 text-sm font-semibold text-slate-600">
               <ShieldCheck className="size-4 text-blue-600" />

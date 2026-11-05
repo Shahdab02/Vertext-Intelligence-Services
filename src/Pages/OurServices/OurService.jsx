@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import {
   ArrowDown,
   ArrowRight,
-  ArrowUpRight,
   BadgeCheck,
   BriefcaseBusiness,
   CheckCircle2,
@@ -254,25 +253,23 @@ const OurService = () => {
               <img
                 src={cyberInvestigationImage}
                 alt="Professional investigation services"
-                className="h-[330px] w-full object-cover opacity-75 sm:h-[410px]"
+                className="h-[330px] w-full object-cover sm:h-[410px]"
               />
+            </div>
 
-              <div className="absolute inset-0 bg-gradient-to-t from-[#071426] via-[#071426]/15 to-transparent" />
-
-              <div className="absolute left-5 top-5 flex items-center gap-2 rounded-full border border-white/20 bg-slate-950/50 px-3 py-2 text-xs font-medium text-white backdrop-blur-md">
+            <motion.div
+              animate={{ y: [0, -3, 0] }}
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+              className="relative mt-3 rounded-2xl border border-white/15 bg-slate-950 p-5 shadow-xl sm:p-6"
+            >
+              <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-2 text-xs font-medium text-white">
                 <span className="size-2 rounded-full bg-blue-400" />
-                Intelligence & Verification
-              </div>
-
-              <motion.div
-                animate={{ y: [0, -5, 0] }}
-                transition={{
-                  duration: 4,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-                className="absolute inset-x-5 bottom-5 rounded-2xl border border-white/15 bg-slate-950/75 p-5 backdrop-blur-xl sm:inset-x-6 sm:bottom-6 sm:p-6"
-              >
+                Intelligence &amp; Verification
+              </p>
                 <div className="flex items-start gap-4">
                   <div className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-blue-600/20 text-blue-300">
                     <Fingerprint size={27} />
@@ -289,8 +286,7 @@ const OurService = () => {
                     </p>
                   </div>
                 </div>
-              </motion.div>
-            </div>
+            </motion.div>
 
             <div className="pointer-events-none absolute -bottom-4 -right-4 size-24 rounded-2xl border border-blue-400/20 sm:-right-7 sm:size-32" />
           </motion.div>
@@ -390,34 +386,20 @@ const OurService = () => {
                       src={service.image}
                       alt={service.name}
                       loading="lazy"
-                      className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                      className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                     />
-
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#071426]/90 via-[#071426]/10 to-[#071426]/10 transition-colors duration-500 group-hover:from-[#071426]/95" />
-
-                    <div className="absolute inset-x-4 top-4 flex items-center justify-between">
-                      <span className="rounded-full border border-white/20 bg-slate-950/40 px-3 py-1.5 text-[9px] font-bold uppercase tracking-[0.13em] text-white backdrop-blur-md sm:text-[10px]">
-                        {service.category}
-                      </span>
-
-                      <span className="flex size-9 items-center justify-center rounded-full border border-white/25 bg-white/10 text-sm font-semibold text-white backdrop-blur-md transition-all duration-300 group-hover:border-blue-400 group-hover:bg-blue-600">
-                        {service.number}
-                      </span>
-                    </div>
-
-                    <motion.div
-                      whileHover={{ rotate: -5, scale: 1.08 }}
-                      className="absolute bottom-4 left-4 flex size-12 items-center justify-center rounded-xl border border-white/20 bg-white/10 text-white shadow-lg backdrop-blur-md transition-colors duration-300 group-hover:bg-blue-600"
-                    >
-                      <Icon size={24} strokeWidth={1.7} />
-                    </motion.div>
-
-                    <div className="absolute bottom-5 right-4 flex size-9 translate-y-2 items-center justify-center rounded-full bg-white text-blue-700 opacity-0 shadow-lg transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-                      <ArrowUpRight size={19} />
-                    </div>
                   </Link>
 
                   <div className="flex flex-1 flex-col p-5 sm:p-6">
+                    <div className="mb-3 flex items-center justify-between gap-3">
+                      <span className="inline-flex items-center gap-2 rounded-full bg-blue-50 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.1em] text-blue-800">
+                        <Icon size={14} strokeWidth={2} />
+                        {service.category}
+                      </span>
+                      <span className="text-xs font-semibold text-slate-500">
+                        {service.number}
+                      </span>
+                    </div>
                     <h3 className="text-lg font-bold leading-snug text-slate-900 transition-colors duration-300 group-hover:text-blue-700">
                       {service.name}
                     </h3>

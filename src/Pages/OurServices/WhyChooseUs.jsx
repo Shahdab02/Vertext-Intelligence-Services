@@ -146,7 +146,7 @@ const WhyChooseUs = ({ serviceId }) => {
             className="group relative"
           >
             <div className="absolute -inset-3 rounded-3xl bg-gradient-to-br from-blue-200/70 via-transparent to-slate-200/80 opacity-70 blur-xl transition-opacity duration-500 group-hover:opacity-100" />
-            <div className="relative overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 p-2 shadow-xl sm:p-3">
+            <div className="relative rounded-2xl border border-slate-200 bg-slate-100 p-2 shadow-xl sm:p-3">
               <div className="relative overflow-hidden rounded-xl">
                 <img
                   src={intelligenceImage}
@@ -155,16 +155,16 @@ const WhyChooseUs = ({ serviceId }) => {
                   className="h-[300px] w-full object-cover transition-transform duration-700 group-hover:scale-105 sm:h-[380px] lg:h-[420px]"
                 />
                 <div className="pointer-events-none absolute inset-3 rounded-lg border border-white/40 sm:inset-4" />
-                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/90 via-slate-950/45 to-transparent px-5 pb-5 pt-16 sm:px-7 sm:pb-7">
-                  <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1.5 text-xs font-semibold text-white backdrop-blur">
-                    <ShieldCheck size={15} className="text-blue-300" />
-                    Discreet. Focused. Professional.
-                  </span>
-                  <figcaption className="mt-3 font-serif text-xl font-semibold text-white sm:text-2xl">
-                    Clarity begins with the right questions.
-                  </figcaption>
-                </div>
               </div>
+              <figcaption className="px-4 pb-4 pt-5 sm:px-5 sm:pb-5">
+                <span className="inline-flex items-center gap-2 rounded-full bg-blue-50 px-3 py-1.5 text-xs font-semibold text-blue-800">
+                  <ShieldCheck size={15} className="text-blue-700" />
+                  Discreet. Focused. Professional.
+                </span>
+                <p className="mt-3 font-serif text-xl font-semibold text-slate-900 sm:text-2xl">
+                  Clarity begins with the right questions.
+                </p>
+              </figcaption>
             </div>
           </motion.figure>
         </div>

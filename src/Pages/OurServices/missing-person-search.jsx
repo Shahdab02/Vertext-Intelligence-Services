@@ -351,8 +351,6 @@ const MissingPersonSearch = () => {
         <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2 lg:gap-20">
           <Reveal>
             <div className="relative">
-              <div className="absolute -bottom-5 -left-5 h-28 w-28 rounded-2xl bg-blue-100" />
-
               <div className="relative overflow-hidden rounded-3xl bg-slate-100">
                 <img
                   src={service.image}
@@ -360,25 +358,18 @@ const MissingPersonSearch = () => {
                   className="h-[330px] w-full object-cover transition duration-700 hover:scale-105 sm:h-[470px]"
                   loading="lazy"
                 />
-
-                <div className="absolute inset-0 bg-gradient-to-t from-[#071426]/80 via-transparent to-transparent" />
-
-                <div className="absolute bottom-5 left-5 right-5 rounded-2xl border border-white/20 bg-[#071426]/85 p-5 backdrop-blur-md sm:bottom-7 sm:left-7 sm:right-7">
-                  <div className="flex items-center gap-4">
-                    <div className="rounded-xl bg-sky-400/10 p-3 text-sky-300">
-                      <FileSearch size={25} />
-                    </div>
-
-                    <div>
-                      <p className="font-semibold text-white">
-                        Information-led enquiries
-                      </p>
-
-                      <p className="mt-1 text-sm text-slate-300">
-                        Careful review of details and potential leads.
-                      </p>
-                    </div>
-                  </div>
+              </div>
+              <div className="mt-3 flex items-center gap-4 rounded-2xl bg-slate-900 p-5 text-white sm:p-6">
+                <div className="rounded-xl bg-sky-400/10 p-3 text-sky-300">
+                  <FileSearch size={25} />
+                </div>
+                <div>
+                  <p className="font-semibold text-white">
+                    Information-led enquiries
+                  </p>
+                  <p className="mt-1 text-sm text-slate-300">
+                    Careful review of details and potential leads.
+                  </p>
                 </div>
               </div>
             </div>

@@ -23,7 +23,14 @@ const ContactBarContent = () => (
         className="whitespace-nowrap hover:text-blue-700"
         href="tel:+919891915550"
       >
-        <strong>+91-9891915550</strong>
+        <strong>+91-9891915550 </strong>
+      </a>
+      <span className="h-5 border-l border-blue-200" aria-hidden="true" />
+      <a
+        className="whitespace-nowrap hover:text-blue-700"
+        href="tel:+911141882075"
+      >
+        <strong> 01141882075 </strong>
       </a>
       <span className="h-5 border-l border-blue-200" aria-hidden="true" />
       <a
@@ -60,7 +67,7 @@ const ContactBarContent = () => (
       </nav>
     </div>
   </div>
-)
+);
 
 const ContactBar = () => {
   return (

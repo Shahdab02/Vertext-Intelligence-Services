@@ -1,7 +1,7 @@
 import { Moon, Sun } from 'lucide-react'
 import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
-import logo from '../../assets/logo-1-300x83.webp'
+import logo from '../../assets/logovertex.jpeg'
 
 // These are the service names and URLs shown in the navigation dropdown.
 const services = [
@@ -25,10 +25,10 @@ const pages = [
 ]
 
 const linkClass = ({ isActive }) =>
-  `block border-b-2 px-1 py-2 text-sm font-medium transition-colors lg:text-[13px] ${
+  `block border-b-2 px-1 py-2 text-[17px] font-bold transition-colors ${
     isActive
       ? 'border-blue-600 text-blue-700'
-      : 'border-transparent text-slate-700 hover:border-blue-600 hover:text-blue-700'
+      : 'border-transparent text-slate-900 hover:border-blue-600 hover:text-blue-700'
   }`
 
 const Navbar = ({ theme, onToggleTheme }) => {
@@ -43,9 +43,14 @@ const Navbar = ({ theme, onToggleTheme }) => {
 
   return (
     <header className="sticky top-0 z-50 border-b border-slate-100 bg-white shadow-sm">
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-5 px-4 py-3 sm:px-6 lg:px-8">
-        <Link to="/" onClick={closeMenus} aria-label="Vertex Intelligence Services home">
-          <img className="h-auto w-48 sm:w-56 lg:w-48" src={logo} alt="Vertex Intelligence Services" />
+      <div className="mx-auto flex max-w-[1500px] items-center justify-between gap-5 px-4 py-3 sm:px-6 lg:px-8">
+        <Link
+          to="/"
+          onClick={closeMenus}
+          aria-label="Vertex Intelligence Services home"
+          className="-ml-2 sm:-ml-3 lg:-ml-4"
+        >
+          <img className="h-auto w-48 sm:w-60 lg:w-[268px] xl:w-[300px]" src={logo} alt="Vertex Intelligence Services" />
         </Link>
 
         <nav
@@ -53,7 +58,7 @@ const Navbar = ({ theme, onToggleTheme }) => {
           aria-label="Main navigation"
           className={`${
             menuOpen ? 'block' : 'hidden'
-          } absolute left-0 right-0 top-full border-t border-slate-100 bg-white px-4 pb-5 shadow-lg xl:static xl:block xl:flex-1 xl:border-0 xl:p-0 xl:shadow-none`}
+          } absolute left-0 right-0 top-full border-t border-slate-100 bg-white px-4 pb-5 shadow-lg xl:static xl:block xl:flex-1 xl:border-0 xl:p-0 xl:pl-8 xl:shadow-none`}
         >
           <div className="flex flex-col gap-1 xl:flex-row xl:items-center xl:justify-center xl:gap-3">
             {pages.slice(0, 2).map((page) => (
@@ -124,7 +129,7 @@ const Navbar = ({ theme, onToggleTheme }) => {
 
         <a
           href={`tel:${phoneNumber}`}
-          className="hidden shrink-0 items-center justify-center rounded-full border border-blue-600 px-4 py-3 text-xs font-semibold uppercase tracking-wide text-blue-700 transition-colors hover:bg-blue-600 hover:text-white xl:inline-flex"
+          className="hidden shrink-0 items-center justify-center rounded-full border border-blue-600 px-6 py-3 text-sm font-semibold uppercase tracking-wide text-blue-700 transition-colors hover:bg-blue-600 hover:text-white xl:inline-flex"
         >
           Talk to Investigator
         </a>

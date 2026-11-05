@@ -1,5 +1,47 @@
 @import "tailwindcss";
 
+@media (min-width: 768px) {
+  #root {
+    width: 100%;
+    zoom: 0.9;
+  }
+}
+
+html,
+body {
+  overflow-x: clip;
+}
+
+body {
+  color: #1e293b;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+main p:not(.uppercase):not(.text-xl):not(.text-2xl):not(.text-3xl):not(.text-4xl):not(.text-5xl):not(.text-6xl),
+main li:not(.text-xl):not(.text-2xl):not(.text-3xl):not(.text-4xl):not(.text-5xl):not(.text-6xl) {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.75;
+}
+
+@media (min-width: 640px) {
+  main p:not(.uppercase):not(.text-xl):not(.text-2xl):not(.text-3xl):not(.text-4xl):not(.text-5xl):not(.text-6xl),
+  main li:not(.text-xl):not(.text-2xl):not(.text-3xl):not(.text-4xl):not(.text-5xl):not(.text-6xl) {
+    font-size: 1.125rem;
+  }
+}
+
+.text-slate-500,
+.text-slate-600,
+.text-slate-700,
+.text-gray-500,
+.text-gray-600,
+.text-gray-700 {
+  color: #1e293b;
+}
+
 @keyframes contact-bar-scroll {
   from {
     transform: translateX(100vw);
@@ -96,6 +138,15 @@ html[data-theme='dark'] {
 html[data-theme='dark'] body {
   background-color: #0b1220;
   color: #e2e8f0;
+}
+
+html[data-theme='dark'] .text-slate-500,
+html[data-theme='dark'] .text-slate-600,
+html[data-theme='dark'] .text-slate-700,
+html[data-theme='dark'] .text-gray-500,
+html[data-theme='dark'] .text-gray-600,
+html[data-theme='dark'] .text-gray-700 {
+  color: #d1dbea !important;
 }
 
 html[data-theme='dark'] .bg-white {
