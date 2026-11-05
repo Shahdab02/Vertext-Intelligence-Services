@@ -1,74 +1,3 @@
-// import { Link } from 'react-router-dom'
-// import recognitionImage from '../../assets/recogntion.webp'
-
-// const standards = [
-//   {
-//     number: '01',
-//     title: 'Confidentiality',
-//     text: 'Every enquiry is approached with discretion and respect for the sensitivity of the matter.',
-//   },
-//   {
-//     number: '02',
-//     title: 'Professional conduct',
-//     text: 'Clear communication and a responsible approach are central to the client experience.',
-//   },
-//   {
-//     number: '03',
-//     title: 'Quality of service',
-//     text: 'We aim to provide focused, relevant investigative support for every case.',
-//   },
-// ]
-
-// const Awards = () => {
-//   return (
-//     <>
-//       <section className="bg-slate-950 px-5 py-16 text-white sm:px-8 sm:py-20">
-//         <div className="mx-auto max-w-7xl">
-//           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-300">Our commitment</p>
-//           <h1 className="mt-3 font-serif text-4xl font-semibold sm:text-5xl">Awards & Recognition</h1>
-//           <p className="mt-5 max-w-2xl leading-7 text-slate-300">
-//             Recognition matters most when it reflects the standards clients experience: discretion,
-//             professionalism, and care at every step.
-//           </p>
-//         </div>
-//       </section>
-//       <section className="mx-auto grid max-w-7xl items-center gap-10 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-2">
-//         <div>
-//           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-blue-700">Standards we value</p>
-//           <h2 className="mt-3 font-serif text-3xl font-semibold text-slate-900 sm:text-4xl">The principles behind our work</h2>
-//           <p className="mt-4 leading-7 text-slate-600">
-//             We are committed to treating each enquiry with respect and communicating clearly about the
-//             process. Our team focuses on responsible, purposeful investigative support.
-//           </p>
-//           <div className="mt-7 space-y-5">
-//             {standards.map((item) => (
-//               <article key={item.number} className="flex gap-4">
-//                 <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-blue-50 text-sm font-bold text-blue-700">{item.number}</span>
-//                 <div>
-//                   <h3 className="font-semibold text-slate-900">{item.title}</h3>
-//                   <p className="mt-1 text-sm leading-6 text-slate-600">{item.text}</p>
-//                 </div>
-//               </article>
-//             ))}
-//           </div>
-//         </div>
-//         <img src={recognitionImage} alt="Recognition and professional standards" className="h-80 w-full rounded-2xl object-cover shadow-xl sm:h-[420px]" />
-//       </section>
-//       <section className="bg-blue-50 px-5 py-12 text-center sm:px-8">
-//         <div className="mx-auto max-w-3xl">
-//           <h2 className="font-serif text-2xl font-semibold text-slate-900">Looking for more information?</h2>
-//           <p className="mt-3 leading-7 text-slate-600">Speak with our team about our services, process, or company credentials.</p>
-//           <Link to="/contact" className="mt-5 inline-flex rounded-full bg-blue-700 px-6 py-3 font-semibold text-white hover:bg-blue-800">
-//             Get in touch
-//           </Link>
-//         </div>
-//       </section>
-//     </>
-//   )
-// }
-
-// export default Awards
-
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
@@ -86,6 +15,7 @@ import recognitionImage from "../../assets/recogntion.webp";
 import trophyImage from "../../assets/trophy.jpeg";
 import ceremonyImage from "../../assets/awards_image/vertexaward1.jpeg";
 import doctorateImage from "../../assets/awards_image/vertexaward2.jpeg";
+import ceremonyImage1 from "../../assets/awards_image/vertexaward4.jpeg";
 
 const standards = [
   {
@@ -306,10 +236,11 @@ const Awards = () => {
           <div className="grid gap-7 md:grid-cols-2">
             {[
               {
-                image: ceremonyImage,
+                image: ceremonyImage1,
                 alt: "Vertex Intelligence Services award ceremony",
                 title: "An award ceremony",
                 mobileAspect: "aspect-[4/3]",
+                imageFit: "object-cover",
                 description:
                   "A proud moment celebrating achievement and professional dedication.",
               },
@@ -318,6 +249,7 @@ const Awards = () => {
                 alt: "Honorary doctorate presented to Dr. Sumit Aggrawal of Vertex Intelligence Services",
                 title: "Honorary Doctorate",
                 mobileAspect: "aspect-[2/3]",
+                imageFit: "object-contain",
                 description:
                   "Recognition presented to Dr. Sumit Aggrawal of Vertex Intelligence Services.",
               },
@@ -337,7 +269,7 @@ const Awards = () => {
                     src={award.image}
                     alt={award.alt}
                     loading="lazy"
-                    className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.02]"
+                    className={`h-full w-full ${award.imageFit} transition duration-500 group-hover:scale-[1.02]`}
                   />
                 </div>
                 <figcaption className="p-6 sm:p-7">
