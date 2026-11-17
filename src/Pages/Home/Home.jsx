@@ -50,8 +50,9 @@ const Home = () => {
         <div className="mx-auto grid min-h-[700px] max-w-7xl items-center gap-10 px-5 pb-24 pt-16 sm:px-8 lg:grid-cols-[1.1fr_.9fr] lg:pb-28 lg:pt-20">
           <div className="max-w-2xl">
             <p className="mb-5 text-xs font-semibold uppercase tracking-[0.25em] text-blue-300 sm:text-sm">
-              Discreet <span className="mx-2 text-blue-500">•</span> Professional{' '}
-              <span className="mx-2 text-blue-500">•</span> Reliable
+              Discreet <span className="mx-2 text-blue-500">•</span>{" "}
+              Professional <span className="mx-2 text-blue-500">•</span>{" "}
+              Reliable
             </p>
             <h1 className="font-serif text-4xl font-semibold leading-[0.9] tracking-tight sm:text-5xl lg:text-7xl">
               UNCOVERING THE
@@ -78,10 +79,10 @@ const Home = () => {
             </div>
             <div className="mt-12 grid max-w-xl grid-cols-2 gap-5 border-t border-white/20 pt-6 sm:grid-cols-4">
               {[
-                'Confidential approach',
-                'Experienced team',
-                'Pan-India operations',
-                'Personal support',
+                "Confidential approach",
+                "Experienced team",
+                "Pan-India operations",
+                "Personal support",
               ].map((item) => (
                 <p
                   key={item}
@@ -177,15 +178,15 @@ const Home = () => {
         </div>
       )}
 
-      <Process />
       <WhyChoise />
       <AwardRecog />
       <FounderMessage />
       <Service />
+      <Process />
       <Testimonial />
       <HomeContact />
     </>
-  )
+  );
 }
 
 export default Home

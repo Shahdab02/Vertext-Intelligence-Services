@@ -6,7 +6,6 @@ import {
   BadgeCheck,
   BriefcaseBusiness,
   CheckCircle2,
-  ChevronRight,
   Fingerprint,
   Eye,
   FileSearch,

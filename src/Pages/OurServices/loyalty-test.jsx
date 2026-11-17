@@ -15,7 +15,6 @@ import {
   HandHeart,
   Compass,
   ChevronRight,
-  Shield,
 } from 'lucide-react'
 
 import loyaltyTestImage from '../../assets/loyality_test.jpg'

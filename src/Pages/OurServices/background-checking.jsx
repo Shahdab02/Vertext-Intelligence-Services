@@ -13,7 +13,6 @@ import {
   Fingerprint,
   LockKeyhole,
   MessageSquareText,
-  Search,
   ShieldCheck,
   Target,
 } from "lucide-react";

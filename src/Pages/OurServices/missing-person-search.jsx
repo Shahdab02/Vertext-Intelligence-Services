@@ -17,7 +17,6 @@ import {
   ChevronRight,
   LockKeyhole,
   Users,
-  PhoneCall,
 } from 'lucide-react'
 
 import missingPersonImage from '../../assets/missing_person.jpg'
